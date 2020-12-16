@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".place.PlaceFragment">
+
+
+    <TextView
+        android:id="@+id/place_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="場所一覧"
+        android:padding="8dp"
+        android:textColor="@color/white_text_color"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/place1"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="@dimen/margin"
+        android:background="@color/colorAccent"
+        android:text="@string/place1"
+        android:textSize="@dimen/button_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/place_title" />
+
+    <Button
+        android:id="@+id/place2"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_margin="@dimen/margin"
+        android:text="@string/place2"
+        android:textSize="@dimen/button_text_size"
+        android:background="@color/colorAccent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/place1" />
+
+    <Button
+        android:id="@+id/place3"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_margin="@dimen/margin"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="72dp"
+        android:text="@string/place3"
+        android:textSize="@dimen/button_text_size"
+        android:background="@color/colorAccent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/place2" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Hello" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="200sp"
+        android:layout_height="50sp"
+        android:text="Click me !!"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_gravity="center"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

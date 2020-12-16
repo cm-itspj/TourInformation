@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">TourInformation</string>
+
+    <string name="place_title">場所</string>
+    <string name="place1">London</string>
+    <string name="place2">New York</string>
+    <string name="place3">SanFranSisco</string>
+
+    <string name="place_detail_text">London is a leading global city. It is the world. It has the most international visitors of any city in the world.</string>
+
+    <string name="restaurant">List of Restaurant</string>
+    <string name="hotel">List of Hotel</string>
+    <string name="cancel">Cancel</string>
+
+    <!--Hotel-->
+    <string name="hotel_name">Hotel Name:</string>
+    <string name="hotel_address">Address:</string>
+    <string name="hotel_price">Price:</string>
+
+    <string name="about">About</string>
+
+</resources>

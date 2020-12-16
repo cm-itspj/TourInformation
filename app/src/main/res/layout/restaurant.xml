@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="restaurantList"
+            type="jp.co.cybermissions.com.example.tourinformation.restaurant.RestaurantViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".restaurant.Restaurant">
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Restaurant List"
+            android:padding="8dp"
+            android:textColor="@color/white_text_color"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/colorAccent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/restaurant_name"
+            android:layout_width="352dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="68dp"
+            android:text="@{restaurantList.res[0].name}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/restaurant_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/restaurant_address"
+            android:layout_width="352dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="156dp"
+            android:text="@{restaurantList.res[0].address}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/restaurant_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/restaurant_menu"
+            android:layout_width="352dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="240dp"
+            android:text="@{restaurantList.res[0].menu}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/restaurant_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/divider0"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="308dp"
+            android:background="?android:attr/listDivider"
+            android:foreground="@drawable/ic_launcher_background"
+            android:outlineSpotShadowColor="@color/black"
+            android:outlineAmbientShadowColor="@color/cardview_dark_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/restaurant_name1"
+            android:layout_width="352dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="16dp"
+            android:text="@{restaurantList.res[1].name}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/restaurant_text"
+            app:layout_constraintEnd_toEndOf="@id/divider0"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="@id/divider0"
+            app:layout_constraintTop_toBottomOf="@+id/divider0" />
+
+        <TextView
+            android:id="@+id/restaurant_address1"
+            android:layout_width="352dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="260dp"
+            android:text="@{restaurantList.res[1].address}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/restaurant_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/restaurant_name" />
+
+        <TextView
+            android:id="@+id/restaurant_menu1"
+            android:layout_width="346dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="96dp"
+            android:text="@{restaurantList.res[1].menu}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/restaurant_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/restaurant_address1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

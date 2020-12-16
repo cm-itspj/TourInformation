@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/place">
+
+    <fragment
+        android:id="@+id/place"
+        android:name="jp.co.cybermissions.com.example.tourinformation.place.PlaceFragment"
+        android:label="Place" >
+        <action
+            android:id="@+id/action_placeFragment_to_placedetailFragment"
+            app:destination="@id/placeDetailFragment"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/placeDetailFragment"
+        android:name="jp.co.cybermissions.com.example.tourinformation.place_detail.PlaceDetailFragment"
+        android:label="place_detail"
+        tools:layout="@layout/place_detail" >
+    <action
+        android:id="@+id/action_placedetailFragment_to_placeFragment"
+        app:destination="@id/place"/>
+
+    <action
+        android:id="@+id/action_placedetailFragment_to_restaurant"
+        app:destination="@id/restaurantFragment"/>
+    <action
+        android:id="@+id/action_placedetailFragment_to_hotel"
+        app:destination="@id/hotelFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/restaurantFragment"
+        android:name="jp.co.cybermissions.com.example.tourinformation.restaurant.RestaurantFragment"
+        android:label="RestaurantFragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/hotelFragment"
+        android:name="jp.co.cybermissions.com.example.tourinformation.hotel.HotelFragment"
+        android:label="HotelFragment" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="jp.co.cybermissions.com.example.tourinformation.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/about_fragment" />
+
+</navigation>
