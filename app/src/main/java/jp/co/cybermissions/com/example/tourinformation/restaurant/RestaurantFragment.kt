@@ -8,6 +8,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
 import jp.co.cybermissions.com.example.tourinformation.R
 import jp.co.cybermissions.com.example.tourinformation.databinding.PlaceDetailBinding
 import jp.co.cybermissions.com.example.tourinformation.databinding.RestaurantBinding
@@ -29,6 +30,9 @@ class RestaurantFragment : Fragment() {
 
         binding.lifecycleOwner = viewLifecycleOwner
 
+//        binding.applyButton.setOnClickListener {view : View ->
+//            view.findNavController().navigate(R.id.action_restaurantFragment_to_applyFragment)
+//        }
         return binding.root
     }
 }

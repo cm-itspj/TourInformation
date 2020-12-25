@@ -9,8 +9,6 @@ import androidx.lifecycle.ViewModel
 import androidx.recyclerview.widget.RecyclerView
 import jp.co.cybermissions.com.example.tourinformation.R
 
-private val ITEM_VIEW_TYPE_HEADER = 0
-private val ITEM_VIEW_TYPE_ITEM = 1
 
 class RestaurantViewModel : ViewModel() {
     data class Restaurant(

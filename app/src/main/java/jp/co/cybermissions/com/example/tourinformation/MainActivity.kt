@@ -3,42 +3,53 @@ package jp.co.cybermissions.com.example.tourinformation
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.Menu
-import android.view.MenuItem
-import android.widget.AdapterView.AdapterContextMenuInfo
-import android.widget.Button
-import android.widget.Toast
+import com.squareup.moshi.JsonAdapter
+import com.squareup.moshi.Moshi
+import com.squareup.moshi.Types
+import java.io.BufferedReader
+import java.io.InputStreamReader
 
 
-class MainActivity : AppCompatActivity() {
+//Array Use DataBinding Not Navigation
+class MainActivity : AppCompatActivity() , DetailListFragment.OnSelected {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        if (savedInstanceState == null) {
+            supportFragmentManager
+                .beginTransaction()
+                .add(R.id.root_layout,DetailListFragment.newInstancce(),"List")
+                .commit()
+        }
+
+        //editText = findViewById(R.id.editText)
+
 //        val button: Button = findViewById(R.id.button)
 //        button.setOnClickListener{ textShow() }
+
+//        val assetManager = resources.assets //アセット呼び出し
+//        val inputStream = assetManager.open("users_list.json") //Jsonファイル
+//        val bufferedReader = BufferedReader(InputStreamReader(inputStream))
+//        val jsonText: String = bufferedReader.readText() //データ
+//        Log.d("json",jsonText)
+//        //val listUserType = Types.newParameterizedType(List::class.java, Detail::class.java)
+//        //val adapter: JsonAdapter<List<Detail>> = Moshi.Builder().build().adapter(listUserType)
+//        val adapter = Moshi.Builder().build().adapter(Detail::class.java)
+//        //val detail: List<Detail>? = adapter.fromJson(jsonText)
+//        val detail = adapter.fromJson(jsonText)
+//        Log.d("jsonjson",detail.toString())
+
     }
 
-//    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-//        super.onCreateOptionsMenu(menu)
-//
-//        val inflater = menuInflater
-//        inflater.inflate(R.menu.options_menu, menu)
-//        Log.i("AboutFragment", "Menu Called")
-//        return true
-//    }
-//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-//        when (item.getItemId()) {
-//            R.id.aboutFragment -> {
-//                return true
-//            }
-//            else -> return  super.onOptionsItemSelected(item)
-//        }
-//
-//    }
-
-//private fun textShow () {
-//    Toast.makeText(this,"Button Clicked",
-//    Toast.LENGTH_SHORT).show()
-//}
+    override fun onSelected(detailModel: DetailModel) {
+        val detailsFragment =
+            DetailsFragment.newInstancce(detailModel)
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.root_layout,detailsFragment,"Details")
+            .addToBackStack(null)
+            .commit()
+    }
 }
