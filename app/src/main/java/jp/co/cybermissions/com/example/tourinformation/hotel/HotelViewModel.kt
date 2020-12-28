@@ -34,12 +34,9 @@ class HotelViewModel : ViewModel() {
         hotel = hotels[hotelIndex]
     }
 
-     fun next() {
-         if (hotels.isEmpty()) {
-             hotels[hotelIndex++]
-
-         }
-    }
-
-
+//     fun next() {
+//         if (hotels.isEmpty()) {
+//             hotels[hotelIndex++]
+//         }
+//    }
 }

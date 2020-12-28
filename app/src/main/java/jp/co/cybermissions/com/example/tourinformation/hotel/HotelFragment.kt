@@ -48,9 +48,9 @@ class HotelFragment : Fragment() {
 
         binding.lifecycleOwner = viewLifecycleOwner
 
-//        binding.applyButton.setOnClickListener {view : View ->
-//            view.findNavController().navigate(R.id.action_hotelFragment_to_applyFragment)
-//        }
+        binding.applyButton.setOnClickListener {view : View ->
+            view.findNavController().navigate(R.id.action_hotelFragment_to_applyFragment)
+        }
         return binding.root
     }
 
