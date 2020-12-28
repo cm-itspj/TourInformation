@@ -30,9 +30,9 @@ class RestaurantFragment : Fragment() {
 
         binding.lifecycleOwner = viewLifecycleOwner
 
-//        binding.applyButton.setOnClickListener {view : View ->
-//            view.findNavController().navigate(R.id.action_restaurantFragment_to_applyFragment)
-//        }
+        binding.applyButton.setOnClickListener {view : View ->
+            view.findNavController().navigate(R.id.action_restaurantFragment_to_applyFragment)
+        }
         return binding.root
     }
 }

@@ -147,13 +147,13 @@
             </LinearLayout>
         </ScrollView>
 
-<!--        <Button-->
-<!--            android:id="@+id/apply_button"-->
-<!--            android:layout_width="200dp"-->
-<!--            android:layout_height="50dp"-->
-<!--            android:background="@color/colorAccent"-->
-<!--            android:text="@string/apply_button"-->
-<!--            app:backgroundTint="@color/colorAccent"-->
-<!--            app:layout_constraintBottom_toBottomOf="@+id/scrollView3" />-->
+        <Button
+            android:id="@+id/apply_button"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:background="@color/colorAccent"
+            android:text="@string/apply_button"
+            app:backgroundTint="@color/colorAccent"
+            app:layout_constraintBottom_toBottomOf="@+id/scrollView3" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
