@@ -1,9 +1,6 @@
 package jp.co.cybermissions.com.example.tourinformation.hotel
 
-import android.util.Log
-import android.view.Menu
 import androidx.lifecycle.ViewModel
-import kotlin.math.log
 
 class HotelViewModel : ViewModel() {
     data class Hotel(
@@ -28,15 +25,7 @@ class HotelViewModel : ViewModel() {
     var hotel: Hotel
     var hotelIndex = 0
 
-
-
     init {
         hotel = hotels[hotelIndex]
     }
-
-//     fun next() {
-//         if (hotels.isEmpty()) {
-//             hotels[hotelIndex++]
-//         }
-//    }
 }
