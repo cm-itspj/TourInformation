@@ -1,12 +1,6 @@
 package jp.co.cybermissions.com.example.tourinformation.place_detail
 
-import android.app.Application
-import android.widget.TextView
-import androidx.databinding.ObservableField
 import androidx.lifecycle.*
-//import jp.co.cybermissions.com.example.tourinformation.Detail
-import jp.co.cybermissions.com.example.tourinformation.R
-import java.util.*
 
 class PlaceDetailViewModel : ViewModel() {
 
@@ -19,7 +13,6 @@ class PlaceDetailViewModel : ViewModel() {
         //_selectedProperty.value = detailsProperty
 
     }
-
 
     private fun CurrentPlace() {
             _currentplace.value =

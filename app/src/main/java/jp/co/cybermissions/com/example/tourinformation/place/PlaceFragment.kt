@@ -39,14 +39,4 @@ class PlaceFragment  : Fragment() {
         //setHasOptionsMenu(true)
         return binding.root
     }
-
-//    fun  buttonClicked() {
-//        name.set("Button Clicked")
-//    }
-
-//    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-//        super.onCreateOptionsMenu(menu, inflater)
-//        inflater.inflate(R.menu.menu_about, menu)
-//    }
-
 }

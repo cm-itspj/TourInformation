@@ -16,23 +16,6 @@ class HotelFragment : Fragment() {
 
     private lateinit var viewModel: HotelViewModel
 
-//    data class Hotel(
-//        val name: String,
-//        val address: String,
-//        val price: String
-//    )
-//
-//    val hotels: MutableList<Hotel> = mutableListOf(
-//        Hotel(name = "KingDom", address = "London", price = "$100"),
-//        Hotel(name = "Channel", address = "London", price = "$75"),
-//        Hotel(name = "Victoria", address = "London", price = "$50")
-//    )
-//
-//    lateinit var hotel: Hotel
-//    var hotelIndex = 0
-
-
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -53,14 +36,4 @@ class HotelFragment : Fragment() {
         }
         return binding.root
     }
-
-
-
-
-//    fun next() {
-//        if (hotels.isEmpty()) {
-//            hotels[hotelIndex++]
-//
-//        }
-//    }
 }

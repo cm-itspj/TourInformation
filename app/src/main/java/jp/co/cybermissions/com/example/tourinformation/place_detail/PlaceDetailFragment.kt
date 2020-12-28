@@ -26,9 +26,6 @@ class PlaceDetailFragment : Fragment() {
             inflater,
             R.layout.place_detail, container, false
         )
-
-
-
         viewModel = ViewModelProvider(this).get(PlaceDetailViewModel::class.java)
 
 
@@ -52,9 +49,5 @@ class PlaceDetailFragment : Fragment() {
         }
 
         return binding.root
-    }
-
-    fun onClick() {
-
     }
 }

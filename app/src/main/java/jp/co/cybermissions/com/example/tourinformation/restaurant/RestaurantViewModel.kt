@@ -1,14 +1,6 @@
 package jp.co.cybermissions.com.example.tourinformation.restaurant
 
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.recyclerview.widget.RecyclerView
-import jp.co.cybermissions.com.example.tourinformation.R
-
 
 class RestaurantViewModel : ViewModel() {
     data class Restaurant(
@@ -23,8 +15,7 @@ class RestaurantViewModel : ViewModel() {
         Restaurant(name = "Kennington Lane Cafe",address = "383 Kennington Lane Vauxhall, London England ",menu = "Salad"))
 
     var restaurant: Restaurant
-
-     var restaurantIndex = 0
+    var restaurantIndex = 0
 
     init {
         restaurant = res[restaurantIndex]
