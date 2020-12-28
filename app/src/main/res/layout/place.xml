@@ -9,12 +9,6 @@
 <!--        tools:context=".place.PlaceFragment">-->
 <!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
 
-
-        <data>
-        <variable
-            name="viewModel"
-            type="jp.co.cybermissions.com.example.tourinformation.place.PlaceViewModel" />
-    </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

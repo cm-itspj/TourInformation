@@ -53,36 +53,11 @@
             app:destination="@id/applyFragment"/>
 
     </fragment>
-<!--    <fragment-->
-<!--        android:id="@+id/aboutFragment"-->
-<!--        android:name="jp.co.cybermissions.com.example.tourinformation.AboutFragment"-->
-<!--        android:label="fragment_about"-->
-<!--        tools:layout="@layout/about_fragment" />-->
 
     <fragment
         android:id="@+id/applyFragment"
         android:name="jp.co.cybermissions.com.example.tourinformation.apply.ApplyFragment"
         android:label="ApplyFragment">
     </fragment>
-
-    <fragment
-        android:id="@+id/detailFragment"
-        android:name="jp.co.cybermissions.com.example.tourinformation.DetailsFragment"
-        android:label="DetailsFragment"
-        tools:layout="@layout/fragment_detail">
-
-        <action
-            android:id="@+id/action_detailFragment_to_hotelFragment"
-            app:destination="@id/hotelFragment"/>
-    </fragment>
-
-
-    <fragment
-        android:id="@+id/fragment_list"
-        android:name="jp.co.cybermissions.com.example.tourinformation.DetailListFragment"
-        android:label="List" >
-    </fragment>
-
-
 
 </navigation>
