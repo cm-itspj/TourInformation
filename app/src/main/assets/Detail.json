@@ -1,0 +1,20 @@
+[
+  {
+    "id" : "1",
+    "name" : "London",
+    "text" : "",
+    "about": "LONDONLONDONLONDONLONDONLONDONLONDONLONDONLONDON"
+  },
+  {
+    "id" : "2",
+    "name" : "NewYork",
+    "text" : "",
+    "about": "NEWYORK is NewYork"
+  },
+  {
+    "id" : "3",
+    "name" : "SanFransico",
+    "text" : "",
+    "about": "SANFRANSICO is Sanfransico"
+  }
+]

@@ -19,6 +19,7 @@
 
     <!--APPLY-->
     <string name="apply_text">Apply</string>
+    <string name="apply">Apply</string>
     <string name="apply_name">NAME</string>
     <string name="apply_email">EMAIL</string>
     <string name="apply_phone">Phone Number</string>

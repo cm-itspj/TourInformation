@@ -20,6 +20,11 @@
         android:name="jp.co.cybermissions.com.example.tourinformation.place_detail.PlaceDetailFragment"
         android:label="place_detail"
         tools:layout="@layout/place_detail" >
+
+<!--        <argument-->
+<!--            android:name="selectedProperty"-->
+<!--            app:argType="jp.co.cybermissions.com.example.tourinformation.Detail"/>-->
+
     <action
         android:id="@+id/action_placedetailFragment_to_placeFragment"
         app:destination="@id/place"/>
@@ -30,6 +35,9 @@
     <action
         android:id="@+id/action_placedetailFragment_to_hotel"
         app:destination="@id/hotelFragment"/>
+        <argument
+            android:name="selectedProperty"
+            app:argType="jp.co.cybermissions.com.example.tourinformation.Detail" />
 
     </fragment>
 

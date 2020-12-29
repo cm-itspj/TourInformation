@@ -2,6 +2,7 @@
 buildscript {
     ext.kotlin_version = "1.4.10"
     ext.navigationVersion = '1.0.0-alpha08'
+    ext.version_glide = '4.8.0'
     repositories {
         google()
         jcenter()

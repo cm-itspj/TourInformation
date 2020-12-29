@@ -22,31 +22,39 @@ class PlaceDetailFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        val binding: PlaceDetailBinding = DataBindingUtil.inflate(
-            inflater,
-            R.layout.place_detail, container, false
-        )
-        viewModel = ViewModelProvider(this).get(PlaceDetailViewModel::class.java)
+//        val binding: PlaceDetailBinding = DataBindingUtil.inflate(
+//            inflater,
+//            R.layout.place_detail, container, false
+//        )
 
+        @Suppress("UNUSED_VARIABLE")
+        val application = requireNotNull(activity).application
+        val binding = PlaceDetailBinding.inflate(inflater)
+        val details = PlaceDetailFragmentArgs.fromBundle(arguments!!).selectedProperty
+        val viewModelFactory = PlaceDetailViewModelFactory(details,application)
 
-        binding.placedetailViewModel = viewModel
+        //viewModel = ViewModelProvider(this).get(PlaceDetailViewModel::class.java)
+        binding.viewModel = ViewModelProvider(
+            this, viewModelFactory).get(PlaceDetailViewModel::class.java)
 
-        binding.lifecycleOwner = viewLifecycleOwner
+        //binding.placedetailViewModel = viewModel
 
-        binding.cancel.setOnClickListener { view: View ->
-            view.findNavController()
-                .navigate(R.id.action_placedetailFragment_to_placeFragment)
-        }
+        binding.lifecycleOwner = this
 
-        binding.restaurant.setOnClickListener { view: View ->
-            view.findNavController()
-                .navigate(R.id.action_placedetailFragment_to_restaurant)
-
-        }
-        binding.hotel.setOnClickListener { view: View ->
-            view.findNavController()
-                .navigate(R.id.action_placedetailFragment_to_hotel)
-        }
+//        binding.cancel.setOnClickListener { view: View ->
+//            view.findNavController()
+//                .navigate(R.id.action_placedetailFragment_to_placeFragment)
+//        }
+//
+//        binding.restaurant.setOnClickListener { view: View ->
+//            view.findNavController()
+//                .navigate(R.id.action_placedetailFragment_to_restaurant)
+//
+//        }
+//        binding.hotel.setOnClickListener { view: View ->
+//            view.findNavController()
+//                .navigate(R.id.action_placedetailFragment_to_hotel)
+//        }
 
         return binding.root
     }
